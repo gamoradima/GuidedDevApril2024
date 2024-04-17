@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "914270d0-bed2-45db-81f6-5b74cc271b6d",
+    "Name": "UsrTestSpanishMadeObject",
+    "ModifiedOnUtc": "\/Date(1713346154000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "English title",
+    "DependsOn": []
+  }
+}
