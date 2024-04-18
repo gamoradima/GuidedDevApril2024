@@ -1,6 +1,8 @@
 <Project>
 	<ItemGroup Label="Entity Files" Condition="'$(PkgPath)' != ''">
+		<Compile Include="$(PkgPath)/DevClassic/Schemas/Account/Account.cs" Condition="Exists('$(PkgPath)/DevClassic/Schemas/Account/Account.cs')" />
 		<Compile Include="$(PkgPath)/DevClassic/Schemas/UsrRealtyTypeClassic/UsrRealtyTypeClassic.cs" Condition="Exists('$(PkgPath)/DevClassic/Schemas/UsrRealtyTypeClassic/UsrRealtyTypeClassic.cs')" />
 		<Compile Include="$(PkgPath)/DevClassic/Schemas/UsrTestSpanishMadeObject/UsrTestSpanishMadeObject.cs" Condition="Exists('$(PkgPath)/DevClassic/Schemas/UsrTestSpanishMadeObject/UsrTestSpanishMadeObject.cs')" />
+		<Compile Include="$(PkgPath)/DevClassic/Schemas/UsrVwContactAgeDays/UsrVwContactAgeDays.cs" Condition="Exists('$(PkgPath)/DevClassic/Schemas/UsrVwContactAgeDays/UsrVwContactAgeDays.cs')" />
 	</ItemGroup>
 </Project>
