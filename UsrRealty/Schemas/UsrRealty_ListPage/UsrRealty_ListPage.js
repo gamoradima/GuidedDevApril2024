@@ -3,6 +3,25 @@ define("UsrRealty_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 		viewConfigDiff: /**SCHEMA_VIEW_CONFIG_DIFF*/[
 			{
 				"operation": "merge",
+				"name": "MenuItem_ImportFromExcel",
+				"values": {
+					"clicked": {
+						"request": "crt.ImportDataRequest",
+						"params": {
+							"entitySchemaName": "UsrRealty"
+						}
+					}
+				}
+			},
+			{
+				"operation": "merge",
+				"name": "FolderTree",
+				"values": {
+					"rootSchemaName": "UsrRealty"
+				}
+			},
+			{
+				"operation": "merge",
 				"name": "DataTable",
 				"values": {
 					"columns": [
@@ -23,29 +42,44 @@ define("UsrRealty_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHE
 							"code": "PDS_CreatedBy",
 							"caption": "#ResourceString(PDS_CreatedBy)#",
 							"dataValueType": 10
-						},
-					]
-				}
-			},
-			{
-				"operation": "merge",
-				"name": "MenuItem_ImportFromExcel",
-				"values": {
-					"clicked": {
-						"request": "crt.ImportDataRequest",
-						"params": {
-							"entitySchemaName": "UsrRealty"
 						}
+					],
+					"selectionState": "$DataTable_SelectionState",
+					"_selectionOptions": {
+						"attribute": "DataTable_SelectionState"
 					}
 				}
 			},
 			{
-				"operation": "merge",
-				"name": "FolderTree",
+				"operation": "insert",
+				"name": "Button_uyi7uuy",
 				"values": {
-					"sourceSchemaName": "FolderTree",
-					"rootSchemaName": "UsrRealty"
-				}
+					"type": "crt.Button",
+					"caption": "#ResourceString(Button_uyi7uuy_caption)#",
+					"color": "accent",
+					"disabled": false,
+					"size": "medium",
+					"iconPosition": "only-text",
+					"visible": true,
+					"clicked": {
+						"request": "crt.RunBusinessProcessRequest",
+						"params": {
+							"processName": "UsrCalcAverageRealtyPriceProcess",
+							"processRunType": "ForTheSelectedRecords",
+							"showNotification": true,
+							"dataSourceName": "PDS",
+							"parameterMappings": {
+								"RealtyIdParameter": "Id"
+							},
+							"filters": "$Items | crt.ToCollectionFilters : 'Items' : $DataTable_SelectionState | crt.SkipIfSelectionEmpty : $DataTable_SelectionState",
+							"sorting": "$ItemsSorting"
+						}
+					},
+					"clickMode": "default"
+				},
+				"parentName": "LeftFilterContainerInner",
+				"propertyName": "items",
+				"index": 3
 			}
 		]/**SCHEMA_VIEW_CONFIG_DIFF*/,
 		viewModelConfigDiff: /**SCHEMA_VIEW_MODEL_CONFIG_DIFF*/[
