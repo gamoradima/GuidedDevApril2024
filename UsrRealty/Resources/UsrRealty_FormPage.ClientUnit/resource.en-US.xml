@@ -16,9 +16,12 @@
 			<Item Name="LocalizableStrings.GridDetailRefreshBtn_edco57g_caption.Value" Value="Refresh" />
 			<Item Name="LocalizableStrings.GridDetailSearchFilter_nivkjgb_placeholder.Value" Value="Search" />
 			<Item Name="LocalizableStrings.GridDetailSettingsBtn_8zclfeg_caption.Value" Value="Actions" />
+			<Item Name="LocalizableStrings.MenuItem_2hlfll6_caption.Value" Value="Add 3 visits" />
+			<Item Name="LocalizableStrings.MenuItem_aavali4_caption.Value" Value="Run web service" />
 			<Item Name="LocalizableStrings.MenuItem_oxfsq1j_caption.Value" Value="Calculate average price" />
 			<Item Name="LocalizableStrings.NumberInput_g2163qh_label.Value" Value="Number" />
 			<Item Name="LocalizableStrings.PriceCannotBeLess.Value" Value="Price cannot be less than 50.0" />
+			<Item Name="LocalizableStrings.RunServiceMenuItem_caption.Value" Value="Run Calc Max Price web service" />
 		</Items>
 	</Group>
 </Resources>

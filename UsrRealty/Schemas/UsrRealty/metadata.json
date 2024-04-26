@@ -59,6 +59,10 @@
   "E2": 1,
   "E6": true,
   "E20": true,
+  "E12": {
+    "FB1": 1,
+    "FB2": "26929c46-51ef-483d-a9b5-dc22d9a16d2d"
+  },
   "E17": "UsrOfferTypeId",
   "E18": "UsrOfferTypeName"
 }
@@ -73,6 +77,10 @@
   "E2": 1,
   "E6": true,
   "E20": true,
+  "E12": {
+    "FB1": 1,
+    "FB2": "39aa8243-6981-434e-a366-04cd1cee6849"
+  },
   "E17": "UsrTypeId",
   "E18": "UsrTypeName"
 }
